@@ -46,7 +46,7 @@ public class EntitySpectreFireball extends EntityFireballBase
             if (result.entityHit != null && (result.entityHit instanceof EntityLivingBase) &&! (result.entityHit instanceof EntitySpectre))
             {
                 EntityLivingBase hit=(EntityLivingBase) result.entityHit; 
-            	hit.attackEntityFrom(DamageSource.causeIndirectMagicDamage(this,this.shootingEntity), 8.0F);
+            	hit.attackEntityFrom(DamageSource.causeIndirectMagicDamage(this,this.shootingEntity), 7.0F);
                 Vec3d pos=hit.getPositionVector();
                 if(hit.attemptTeleport(shootingEntity.posX, shootingEntity.posY+1+this.rand.nextInt(4), shootingEntity.posZ)&&shootingEntity.attemptTeleport(pos.x,pos.y,pos.z)){
                 	shootingEntity.playSound(SoundEvents.ENTITY_ENDERMEN_TELEPORT,1.0f,1.0f);
