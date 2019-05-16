@@ -2,7 +2,7 @@
 {
   "modid": "ender_spectre",
   "name": "Ender Spectres",
-  "description": "Example placeholder mod.",
+  "description": "End spectre entity for minecraft 1.12.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
