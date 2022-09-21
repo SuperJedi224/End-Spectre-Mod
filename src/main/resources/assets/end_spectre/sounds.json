@@ -1,0 +1,38 @@
+{
+	"entity.spectre.ambient": {
+    	"subtitle": "entity.spectre.ambient",
+		"sounds": [
+		  "minecraft:mob/blaze/breathe1",
+     	  "minecraft:mob/blaze/breathe2",
+     	  "minecraft:mob/blaze/breathe3",
+     	  "minecraft:mob/blaze/breathe4"
+    	]
+	},
+	"entity.spectre.hurt": {
+    	"subtitle": "entity.spectre.hurt",
+		"sounds": [
+			"minecraft:mob/blaze/hit1",
+      		"minecraft:mob/blaze/hit2",
+     		"minecraft:mob/blaze/hit3",
+     		"minecraft:mob/blaze/hit4"
+		]
+	},
+	"entity.spectre.death": {
+    	"subtitle": "entity.spectre.death",
+		"sounds": [
+			"minecraft:mob/blaze/death"
+		]
+	},
+	"entity.spectre.burn": {
+    	"subtitle": "entity.spectre.burn",
+		"sounds": [
+			"minecraft:fire/fire"
+		]
+	},
+	"entity.spectre.shoot": {
+    	"subtitle": "entity.spectre.shoot",
+		"sounds": [
+			"minecraft:mob/ghast/fireball4"
+		]
+	}
+}
