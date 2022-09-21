@@ -10,6 +10,10 @@ entity.spectre.burn=Spectre crackles
 entity.spectre.shoot=Spectre shoots
 
 # Config
+end_spectre.config.spawn=Spawning
+end_spectre.config.spawn.tooltip=Adjust Spectre's spawning
+end_spectre.config.stats=Stats
+end_spectre.config.stats.tooltip=Adjust Spectre's stats
 end_spectre.config.spawn.spawnWeight=Spawn Weight
 end_spectre.config.spawn.spawnWeight.tooltip=Adjust Spectre's spawn weight
 end_spectre.config.spawn.minSpawnCount=Spawn Group Minimum Size
