@@ -35,6 +35,8 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import io.github.superjedi224.end_spectre.util.EndSpectreConfig;
+import io.github.superjedi224.end_spectre.util.EndSpectreSounds;
 
 public class EntitySpectre extends EntityMob
 {
@@ -51,8 +53,8 @@ public class EntitySpectre extends EntityMob
         this.setPathPriority(PathNodeType.LAVA, 1.0F);
         this.setPathPriority(PathNodeType.DANGER_FIRE, 0.0F);
         this.setPathPriority(PathNodeType.DAMAGE_FIRE, 0.0F);
-        this.isImmuneToFire = true;
-        this.experienceValue = 10;
+        this.isImmuneToFire = EndSpectreConfig.stats.isImmuneToFire;
+        this.experienceValue = EndSpectreConfig.stats.experienceValue;
     }
 
     public static void registerFixesBlaze(DataFixer fixer)
@@ -74,9 +76,9 @@ public class EntitySpectre extends EntityMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(6.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.24D);
-        this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(48.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(EndSpectreConfig.stats.attackDamage);
+        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(EndSpectreConfig.stats.movementSpeed);
+        this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(EndSpectreConfig.stats.followRange);
     }
 
     protected void entityInit()
@@ -87,17 +89,17 @@ public class EntitySpectre extends EntityMob
 
     protected SoundEvent getAmbientSound()
     {
-        return SoundEvents.ENTITY_BLAZE_AMBIENT;
+        return EndSpectreSounds.ENTITY_SPECTRE_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return SoundEvents.ENTITY_BLAZE_HURT;
+        return EndSpectreSounds.ENTITY_SPECTRE_HURT;
     }
 
     protected SoundEvent getDeathSound()
     {
-        return SoundEvents.ENTITY_BLAZE_DEATH;
+        return EndSpectreSounds.ENTITY_SPECTRE_DEATH;
     }
 
     @SideOnly(Side.CLIENT)
@@ -129,7 +131,7 @@ public class EntitySpectre extends EntityMob
         {
             if (this.rand.nextInt(24) == 0 && !this.isSilent())
             {
-                this.world.playSound(this.posX + 0.5D, this.posY + 0.5D, this.posZ + 0.5D, SoundEvents.ENTITY_BLAZE_BURN, this.getSoundCategory(), 0.75F + 0.5F*this.rand.nextFloat(), this.rand.nextFloat() * 0.5F + 0.5F, false);
+                this.world.playSound(this.posX + 0.5D, this.posY + 0.5D, this.posZ + 0.5D, EndSpectreSounds.ENTITY_SPECTRE_BURN, this.getSoundCategory(), 0.75F + 0.5F*this.rand.nextFloat(), this.rand.nextFloat() * 0.5F + 0.5F, false);
             }
 
             for (int i = 0; i < 2; ++i)
@@ -361,7 +363,7 @@ public class EntitySpectre extends EntityMob
                         if (this.attackStep > 1)
                         {
                             float f = MathHelper.sqrt(MathHelper.sqrt(d0)) * 0.5F;
-                            this.blaze.world.playEvent((EntityPlayer)null, 1018, new BlockPos((int)this.blaze.posX, (int)this.blaze.posY, (int)this.blaze.posZ), 0);
+                            this.blaze.playSound(EndSpectreSounds.ENTITY_SPECTRE_SHOOT, 1.0f, 1.0f);
 
                             for (int i = 0; i < 1; ++i)
                             {
