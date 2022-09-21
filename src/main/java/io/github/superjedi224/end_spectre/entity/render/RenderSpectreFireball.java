@@ -2,6 +2,7 @@ package io.github.superjedi224.end_spectre.entity.render;
 
 import io.github.superjedi224.end_spectre.entity.EntitySpectre;
 import io.github.superjedi224.end_spectre.entity.EntitySpectreFireball;
+import io.github.superjedi224.end_spectre.EnderMod;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
@@ -16,7 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderSpectreFireball extends Render<EntitySpectreFireball>
 {
-    private static final ResourceLocation DRAGON_FIREBALL_TEXTURE = new ResourceLocation("minecraft","textures/entity/enderdragon/dragon_fireball.png");
+    private static final ResourceLocation SPECTRE_FIREBALL_TEXTURE = new ResourceLocation(EnderMod.MODID,"textures/entity/spectre_fireball.png");
 
     public RenderSpectreFireball(RenderManager renderManagerIn)
     {
@@ -75,6 +76,6 @@ public class RenderSpectreFireball extends Render<EntitySpectreFireball>
     
     protected ResourceLocation getEntityTexture(EntitySpectreFireball entity)
     {
-        return DRAGON_FIREBALL_TEXTURE;
+        return SPECTRE_FIREBALL_TEXTURE;
     }
 }
