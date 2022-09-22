@@ -1,1 +1,32 @@
+# Entities
 entity.end_spectre.name=Spectre
+entity.end_spectre_fireball.name=Spectre Fireball
+
+# Subtitles
+entity.spectre.ambient=Spectre breathes
+entity.spectre.hurt=Spectre hurts
+entity.spectre.death=Spectre dies
+entity.spectre.burn=Spectre crackles
+entity.spectre.shoot=Spectre shoots
+
+# Config
+end_spectre.spawn=Spawning
+end_spectre.spawn.tooltip=Adjust Spectre's spawning
+end_spectre.stats=Stats
+end_spectre.stats.tooltip=Adjust Spectre's stats
+end_spectre.config.spawn.spawnWeight=Spawn Weight
+end_spectre.config.spawn.spawnWeight.tooltip=Adjust Spectre's spawn weight
+end_spectre.config.spawn.minSpawnCount=Spawn Group Minimum Size
+end_spectre.config.spawn.minSpawnCount.tooltip=Adjust Spectre's min group size
+end_spectre.config.spawn.maxSpawnCount=Spawn Group Maximum Size
+end_spectre.config.spawn.maxSpawnCount.tooltip=Adjust Spectre's max group size
+end_spectre.config.stats.isImmuneToFire=Immune To Fire
+end_spectre.config.stats.isImmuneToFire.tooltip=Adjust Spectre's immunity to fire
+end_spectre.config.stats.experienceValue=Experience Value
+end_spectre.config.stats.experienceValue.tooltip=Adjust Spectre's xp value
+end_spectre.config.stats.attackDamage=Attack Damage
+end_spectre.config.stats.attackDamage.tooltip=Adjust Spectre's attack damage
+end_spectre.config.stats.movementSpeed=Movement Speed
+end_spectre.config.stats.movementSpeed.tooltip=Adjust Spectre's movement speed
+end_spectre.config.stats.followRange=Follow Range
+end_spectre.config.stats.followRange.tooltip=Adjust Spectre's follow range
